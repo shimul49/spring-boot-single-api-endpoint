@@ -9,3 +9,7 @@ Later The param will replaced with alternative value to avoid passing the Contro
 1. Spring Boot v3.1
 2. Spring Data JPA
 3. MS SQL Server
+
+![Spring Boot single Endpoint](img/reflection-1.png)
+
+![Spring Boot single Endpoint](img/reflection-2.png)

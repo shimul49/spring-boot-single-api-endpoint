@@ -17,10 +17,8 @@ import java.util.Map;
 public class MainController {
     @GetMapping("/api/v1/jsonRequest")
     public ResponseEntity<?> resolveResource(
-            @RequestParam String controller,
-            @RequestParam String methodName,
-            @RequestParam HttpMethod httpMethod,
-            @RequestBody(required = false) Map<String, Object> body
+            @RequestParam String controller, @RequestParam String methodName,
+            @RequestParam HttpMethod httpMethod, @RequestBody(required = false) Map<String, Object> body
     ) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class<?> controllerClass = Class.forName("io.naztech.reflect.controller." + controller + "Controller");
         Method methodToInvoke = Arrays.stream(controllerClass.getDeclaredMethods())
